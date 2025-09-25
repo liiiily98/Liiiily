@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing Assistant – Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="media.html">Media</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="grammar.html">Grammar &amp; Style</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <section class="card" aria-labelledby="contact-title">
+        <h1 id="contact-title">Contact</h1>
+        <p class="muted">We collect only what is needed to reply. No sales, no third-party sharing.</p>
+        <form action="#" method="post">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required></textarea>
+
+          
+          <div class="privacy-consent">
+          <label>
+          <input type="checkbox" id="consent" name="consent" required />
+          I consent to you using my data to reply to this message.
+          </label>
+</div>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Nielsen (1994), WCAG 2.1 (2018), Floridi &amp; Taddeo (2016), Raji et al. (2020)</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing Assistant - Tools</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="tools.html" aria-current="page">Tools</a>
+        <a href="media.html">Media</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="grammar.html">Grammar &amp; Style</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    <div class="wrap">
+      <section class="card" aria-labelledby="tools-title">
+        <h1 id="tools-title">Tools</h1>
+        <p class="muted">Simplest version: includes a text input with instant preview.</p>
+
+        <h2>Thesis Starter</h2>
+        <p>I argue that <em>[topic]</em> because <em>[reason 1]</em>, <em>[reason 2]</em>, and <em>[reason 3]</em>.</p>
+
+        <h2>Outline Starter</h2>
+        <ol>
+          <li>Introduction - hook, background, thesis</li>
+          <li>Body 1 - point A</li>
+          <li>Body 2 - point B</li>
+          <li>Body 3 - point C</li>
+          <li>Conclusion - summary &amp; closing insight</li>
+        </ol>
+
+        <h2>Try It Yourself</h2>
+        <form id="userForm" action="#" method="post">
+          <label for="userText">Enter your text:</label>
+          <input type="text" id="userText" name="userText" placeholder="Write something here..." />
+          <button type="submit">Submit</button>
+        </form>
+        <div class="card" style="margin-top:1rem;">
+          <h3>Preview:</h3>
+          <p id="preview" class="muted">(Your text will appear here)</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('userForm');
+    const input = document.getElementById('userText');
+    const preview = document.getElementById('preview');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const text = input.value.trim();
+      preview.textContent = text ? text : '(No text entered)';
+    });
+
+    input.addEventListener('input', function() {
+      const text = input.value.trim();
+      preview.textContent = text ? text : '(Your text will appear here)';
+    });
+  </script>
+</body>
+</html>
+<footer>
+<div class="wrap"> Nielsen (1994), WCAG 2.1 (2018), Floridi &amp; Taddeo (2016), Raji et al. (2020)</div>
+</footer>
+</body>
+</html>
